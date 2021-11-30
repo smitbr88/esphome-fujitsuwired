@@ -45,7 +45,7 @@ CONFIG_SCHEMA = climate.CLIMATE_SCHEMA.extend(
 
 @coroutine
 def to_code(config):
-    var = cg.new_Pvariable(config[CONF_ID], cg.RawExpression(f'&{serial}'))
+    var = cg.new_Pvariable(config[CONF_ID])
 
     supports = config[CONF_SUPPORTS]
     traits = var.config_traits()
